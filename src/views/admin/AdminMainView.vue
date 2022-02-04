@@ -1,40 +1,12 @@
 <template>
-	<div>
-		<AdminNavigation v-if="$route.matched.some(record => record.meta.requiresAuth)"></AdminNavigation>
-		<router-view></router-view>
-		<router-view name="sidebar"></router-view>
-		<va-card color="background" style="padding: 0.75rem;">
-			<div class="row">
-				<div class="flex md12">
-					<div class="item">md12</div>
-				</div>
-				<div class="flex md6">
-					<div class="item">md6</div>
-				</div>
-				<div class="flex md6">
-					<div class="item">md6</div>
-				</div>
-			</div>
-			<br />
-			<div class="row">
-				<div class="flex md12">
-					<div class="item">md12</div>
-				</div>
-				<div class="flex md9">
-					<div class="item">md9</div>
-				</div>
-				<div class="flex md3">
-					<div class="item">md3</div>
-				</div>
-			</div>
-		</va-card>
-	</div>
+	<AdminDashboardView v-if="$route.name == 'Admin'"></AdminDashboardView>
+	<router-view></router-view>
 </template>
 <script>
-import AdminNavigation from "../../components/AdminNavigation"
+import AdminDashboardView from "./AdminDashboardView";
 export default {
 	name: 'AdminMainView',
-	components: {AdminNavigation},
+	components: {AdminDashboardView},
 	data() {
 		return {}
 	},

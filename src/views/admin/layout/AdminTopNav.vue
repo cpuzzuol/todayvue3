@@ -1,10 +1,12 @@
 <template>
-	<input type="submit" value="SUBMIT"/>
+	<div>
+		<p>Admin Top Nav</p>
+	</div>
 </template>
 
 <script>
 export default {
-	name: "StoryForm"
+	name: "AdminTopNav"
 }
 </script>
 

@@ -1,12 +1,22 @@
 <template>
-  <router-view/>
+	<div id="app">
+		<AdminLayout v-if="isAdminRoute"></AdminLayout>
+		<TodayLayout v-else></TodayLayout>
+	</div>
 </template>
 
 <script>
+import AdminLayout from "./views/admin/layout/AdminLayout";
+import TodayLayout from "./views/today/layout/TodayLayout";
 export default {
-	components: {},
+	components: {TodayLayout, AdminLayout},
 	async created () {
 
+	},
+	computed: {
+		isAdminRoute () {
+			return this.$route.matched.some(({ name }) => name === 'Admin')
+		}
 	},
 	methods: {
 

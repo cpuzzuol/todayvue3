@@ -6,9 +6,7 @@ import store from '../store'
 import axios from "axios";
 import StoriesMainView from "../views/admin/stories/StoriesMainView"
 import StoriesNewView from "../views/admin/stories/StoriesNewView"
-import AdminSidebar from "../views/admin/AdminSidebar"
-// import StoriesLandingView from "../views/stories/StoriesLandingView"
-// import StoriesLandingView2 from "../views/stories/StoriesLandingView2"
+import AdminSidebar from "../views/admin/layout/AdminSidebar"
 // import VueCookies from "vue-cookies";
 
 const routes = [
@@ -24,7 +22,8 @@ const routes = [
 		path: '/admin',
 		name: 'Admin',
 		components: {
-			default: AdminMainView
+			default: AdminMainView,
+			sidebar: AdminSidebar
 		},
 		meta: {
 			requiresAuth: true

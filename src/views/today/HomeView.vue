@@ -1,15 +1,11 @@
 <template>
-  <div>
-		<PublicNavigation></PublicNavigation>
-    HOME
-		<router-view></router-view>
-  </div>
+	HOME
+	<router-view></router-view>
 </template>
 
 <script>
-import PublicNavigation from "../../components/PublicNavigation"
 export default {
   name: 'HomeView',
-  components: {PublicNavigation},
+  components: {},
 };
 </script>
