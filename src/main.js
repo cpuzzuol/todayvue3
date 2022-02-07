@@ -8,6 +8,7 @@ import axios from "axios"
 import { VuesticPlugin } from 'vuestic-ui' // <-
 import 'vuestic-ui/dist/vuestic-ui.css'
 import "./assets/scss/admin.scss"
+import "./assets/scss/today.scss"
 
 loadFonts()
 
