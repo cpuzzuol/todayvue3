@@ -1,6 +1,6 @@
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production'
-		? '/todayvue3/'
+		? '/todayvue3/dist'
 		: '/',
 	devServer: {
 		proxy: {
