@@ -1,7 +1,8 @@
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production'
-		? '/todayvue3/dist'
+		? ''
 		: '/',
+	outputDir: '../frontend', // running 'yarn build' will send production code here
 	devServer: {
 		proxy: {
 			'^/api': {

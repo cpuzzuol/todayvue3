@@ -27,15 +27,18 @@ export default {
 		return check
 	},
 	async check(axios) {
-		return await axios.get('/api/checklogin')
+		return await axios.get('http://0.0.0.0/api/checklogin')
 			.then(r => {
 				if (!r.data) {
-					location.replace('https://localhost:8443/cas/login?service=http://0.0.0.0/login')
+					console.log(r)
+					// location.replace('https://netid.emich.edu/cas/login?service=https://ucrisko.ddns.net/admin')
+					// location.replace('https://netid.emich.edu/cas/login?service=http://localhost:8080/admin')
 				}
+				console.log(r)
 				return r.data
 			})
 			.catch(() => {
-				location.replace('https://localhost:8443/cas/login?service=http://0.0.0.0/login')
+				// location.replace('https://netid.emich.edu/cas/login?service=http://localhost:8080')
 			})
 	},
 	// Run this on load (window.onload) to logout after a period of time
